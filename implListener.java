@@ -173,6 +173,18 @@ public interface implListener extends ParseTreeListener {
 	 */
 	void exitUnequal(implParser.UnequalContext ctx);
 	/**
+	 * Enter a parse tree produced by the {@code LessThan}
+	 * labeled alternative in {@link implParser#condition}.
+	 * @param ctx the parse tree
+	 */
+	void enterLessThan(implParser.LessThanContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code LessThan}
+	 * labeled alternative in {@link implParser#condition}.
+	 * @param ctx the parse tree
+	 */
+	void exitLessThan(implParser.LessThanContext ctx);
+	/**
 	 * Enter a parse tree produced by the {@code Or}
 	 * labeled alternative in {@link implParser#condition}.
 	 * @param ctx the parse tree
@@ -208,4 +220,16 @@ public interface implListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitAnd(implParser.AndContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code MoreThan}
+	 * labeled alternative in {@link implParser#condition}.
+	 * @param ctx the parse tree
+	 */
+	void enterMoreThan(implParser.MoreThanContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code MoreThan}
+	 * labeled alternative in {@link implParser#condition}.
+	 * @param ctx the parse tree
+	 */
+	void exitMoreThan(implParser.MoreThanContext ctx);
 }

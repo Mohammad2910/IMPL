@@ -24,6 +24,8 @@ expr	: e1=expr '+' e2=expr # Addition
 
 condition : e1=expr '!=' e2=expr # Unequal
 	| e1=expr '==' e2=expr # Equal
+	| e1=expr '<'  e2=expr # LessThan
+	| e1=expr '>'  e2=expr # MoreThan
 	| e1=expr '&&' e2=expr # And
 	| c1=condition '&&' c2=condition # And
 	| e1=expr '||' e2=expr # Or

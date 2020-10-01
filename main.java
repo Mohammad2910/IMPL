@@ -170,6 +170,19 @@ class Interpreter extends AbstractParseTreeVisitor<Double> implements implVisito
 
 	}
 
+	public Double visitLessThan(implParser.LessThanContext ctx) {
+		Double v1=visit(ctx.e1);
+		Double v2=visit(ctx.e2);
+		if(v1 < v2)  return 1.0;
+		else return 0.0;
+	}
+
+	public Double visitMoreThan(implParser.MoreThanContext ctx) {
+		Double v1=visit(ctx.e1);
+		Double v2=visit(ctx.e2);
+		if(v1 > v2)  return 1.0;
+		else return 0.0;
+	}
 
 }
 

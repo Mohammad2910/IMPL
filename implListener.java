@@ -173,6 +173,18 @@ public interface implListener extends ParseTreeListener {
 	 */
 	void exitUnequal(implParser.UnequalContext ctx);
 	/**
+	 * Enter a parse tree produced by the {@code Or}
+	 * labeled alternative in {@link implParser#condition}.
+	 * @param ctx the parse tree
+	 */
+	void enterOr(implParser.OrContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code Or}
+	 * labeled alternative in {@link implParser#condition}.
+	 * @param ctx the parse tree
+	 */
+	void exitOr(implParser.OrContext ctx);
+	/**
 	 * Enter a parse tree produced by the {@code Equal}
 	 * labeled alternative in {@link implParser#condition}.
 	 * @param ctx the parse tree

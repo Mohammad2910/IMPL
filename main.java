@@ -143,5 +143,33 @@ class Interpreter extends AbstractParseTreeVisitor<Double> implements implVisito
 		return 0.0;
 		}	
 	}
+
+	public Double visitOr(implParser.OrContext ctx) {
+		Double v1;
+	Double v2;
+	if (visit(ctx.e1) != null) {
+		v1 = visit(ctx.e1);
+	} else {
+		v1 = visit(ctx.c1);
+	}
+	if (visit(ctx.e2) != null) {
+		v2 = visit(ctx.e2);
+	} else {
+		v2 = visit(ctx.c2);
+	}
+
+	if(v1.equals(1.0) && v2.equals(1.0)){  
+		return 1.0;
+	} else if (v1.equals(1.0) && v2.equals(0.0)) {
+		return 1.0;
+	} else if (v1.equals(0.0) && v2.equals(1.0)) {
+		return 1.0;
+	} else {
+		return 0.0;
+	}
+
+	}
+
+
 }
 

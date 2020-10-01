@@ -25,7 +25,9 @@ expr	: e1=expr '+' e2=expr # Addition
 condition : e1=expr '!=' e2=expr # Unequal
 	| e1=expr '==' e2=expr # Equal
 	| e1=expr '&&' e2=expr # And
+	| c1=condition '&&' c2=condition # And
 	| e1=expr '||' e2=expr # Or
+	| c1=condition '||' c2=condition #Or
 	  ;  
 
 ID    : ALPHA (ALPHA|NUM)* ;

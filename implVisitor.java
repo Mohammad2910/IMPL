@@ -107,6 +107,13 @@ public interface implVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitUnequal(implParser.UnequalContext ctx);
 	/**
+	 * Visit a parse tree produced by the {@code Or}
+	 * labeled alternative in {@link implParser#condition}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitOr(implParser.OrContext ctx);
+	/**
 	 * Visit a parse tree produced by the {@code Equal}
 	 * labeled alternative in {@link implParser#condition}.
 	 * @param ctx the parse tree

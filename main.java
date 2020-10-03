@@ -66,7 +66,20 @@ class Interpreter extends AbstractParseTreeVisitor<Double> implements implVisito
  	Double v=visit(ctx.e);
 	env.setVariable(ctx.x.getText(),v);
 	return null;
-    }
+	}
+	
+	public Double visitIncreOrDecre(implParser.IncreOrDecreContext ctx) {
+		Double v=env.getVariable(ctx.x.getText());
+
+		
+		if (ctx.op.getText().equals("--")) {
+			env.setVariable(ctx.x.getText(),v-1);
+		} else {
+			env.setVariable(ctx.x.getText(),v+1);
+		}
+
+		return null;
+	}
     
     public Double visitOutput(implParser.OutputContext ctx){
 	Double v=visit(ctx.e);
@@ -106,7 +119,7 @@ class Interpreter extends AbstractParseTreeVisitor<Double> implements implVisito
     };
     
     public Double visitAddOrSub(implParser.AddOrSubContext ctx){
-	if (ctx.op.getText.equals("+")) {
+	if (ctx.op.getText().equals("+")) {
 		return visit(ctx.e1)+visit(ctx.e2);
 	} else {
 		return visit(ctx.e1)-visit(ctx.e2);
@@ -115,7 +128,7 @@ class Interpreter extends AbstractParseTreeVisitor<Double> implements implVisito
 	};
 
     public Double visitMultOrDiv(implParser.MultOrDivContext ctx){
-		if (ctx.op.getText.equals("*")) {
+		if (ctx.op.getText().equals("*")) {
 			return visit(ctx.e1)*visit(ctx.e2);
 		} else {
 			return visit(ctx.e1)/visit(ctx.e2);
@@ -123,7 +136,7 @@ class Interpreter extends AbstractParseTreeVisitor<Double> implements implVisito
 	};
 
 	public Double visitFortegn(implParser.FortegnContext ctx) {
-		if (ctx.op.getText.equals("+")) {
+		if (ctx.op.getText().equals("+")) {
 			return visit(ctx.e);
 		} else {
 			return -visit(ctx.e);
@@ -137,7 +150,7 @@ class Interpreter extends AbstractParseTreeVisitor<Double> implements implVisito
     public Double visitUnequal(implParser.UnequalContext ctx){
 	Double v1=visit(ctx.e1);
 	Double v2=visit(ctx.e2);
-	if (v1.equals(v2))  return 0.0;
+	if (v1.equals(v2)) return 0.0;
 	else return 1.0;
 	}
 	

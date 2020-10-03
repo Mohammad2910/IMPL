@@ -1,4 +1,4 @@
-// Generated from impl.g4 by ANTLR 4.8
+// Generated from /mnt/c/Users/Nafiu/Documents/DTU/Diplom Softwareteknologi/3. semester/Compilerteknik/impl/impl.g4 by ANTLR 4.8
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;

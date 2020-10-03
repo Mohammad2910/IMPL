@@ -19,7 +19,7 @@ test:	main.class
 
 tree:	$(GENERATED) impl.g4
 	javac $(GENERATED)
-	$(grun) impl start -tree -gui < impl_input.txt
+	$(grun) impl start -tree -gui < impl_additional.txt
 
 clean:
 	rm $(GENERATED)

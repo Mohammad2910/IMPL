@@ -37,6 +37,13 @@ public interface implVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitAssignment(implParser.AssignmentContext ctx);
 	/**
+	 * Visit a parse tree produced by the {@code IncreOrDecre}
+	 * labeled alternative in {@link implParser#command}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIncreOrDecre(implParser.IncreOrDecreContext ctx);
+	/**
 	 * Visit a parse tree produced by the {@code Output}
 	 * labeled alternative in {@link implParser#command}.
 	 * @param ctx the parse tree

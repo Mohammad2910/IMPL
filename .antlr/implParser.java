@@ -1,4 +1,4 @@
-// Generated from impl.g4 by ANTLR 4.8
+// Generated from /mnt/c/Users/Nafiu/Documents/DTU/Diplom Softwareteknologi/3. semester/Compilerteknik/impl/impl.g4 by ANTLR 4.8
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -108,19 +108,6 @@ public class implParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_start; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).enterStart(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).exitStart(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof implVisitor ) return ((implVisitor<? extends T>)visitor).visitStart(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final StartContext start() throws RecognitionException {
@@ -181,19 +168,6 @@ public class implParser extends Parser {
 			return getRuleContext(CommandContext.class,i);
 		}
 		public MultipleCommandsContext(ProgramContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).enterMultipleCommands(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).exitMultipleCommands(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof implVisitor ) return ((implVisitor<? extends T>)visitor).visitMultipleCommands(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 	public static class SingleCommandContext extends ProgramContext {
 		public CommandContext c;
@@ -201,19 +175,6 @@ public class implParser extends Parser {
 			return getRuleContext(CommandContext.class,0);
 		}
 		public SingleCommandContext(ProgramContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).enterSingleCommand(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).exitSingleCommand(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof implVisitor ) return ((implVisitor<? extends T>)visitor).visitSingleCommand(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ProgramContext program() throws RecognitionException {
@@ -294,19 +255,6 @@ public class implParser extends Parser {
 			return getRuleContext(ExprContext.class,0);
 		}
 		public AssignmentContext(CommandContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).enterAssignment(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).exitAssignment(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof implVisitor ) return ((implVisitor<? extends T>)visitor).visitAssignment(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 	public static class ForLoopContext extends CommandContext {
 		public Token x;
@@ -324,19 +272,6 @@ public class implParser extends Parser {
 			return getRuleContext(ProgramContext.class,0);
 		}
 		public ForLoopContext(CommandContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).enterForLoop(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).exitForLoop(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof implVisitor ) return ((implVisitor<? extends T>)visitor).visitForLoop(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 	public static class IncreOrDecreContext extends CommandContext {
 		public Token x;
@@ -344,19 +279,6 @@ public class implParser extends Parser {
 		public TerminalNode ID() { return getToken(implParser.ID, 0); }
 		public TerminalNode INCDEC() { return getToken(implParser.INCDEC, 0); }
 		public IncreOrDecreContext(CommandContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).enterIncreOrDecre(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).exitIncreOrDecre(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof implVisitor ) return ((implVisitor<? extends T>)visitor).visitIncreOrDecre(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 	public static class OutputContext extends CommandContext {
 		public ExprContext e;
@@ -364,19 +286,6 @@ public class implParser extends Parser {
 			return getRuleContext(ExprContext.class,0);
 		}
 		public OutputContext(CommandContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).enterOutput(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).exitOutput(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof implVisitor ) return ((implVisitor<? extends T>)visitor).visitOutput(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 	public static class WhileLoopContext extends CommandContext {
 		public ConditionContext c;
@@ -388,19 +297,6 @@ public class implParser extends Parser {
 			return getRuleContext(ProgramContext.class,0);
 		}
 		public WhileLoopContext(CommandContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).enterWhileLoop(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).exitWhileLoop(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof implVisitor ) return ((implVisitor<? extends T>)visitor).visitWhileLoop(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final CommandContext command() throws RecognitionException {
@@ -518,19 +414,6 @@ public class implParser extends Parser {
 			return getRuleContext(ExprContext.class,0);
 		}
 		public ParenthesisContext(ExprContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).enterParenthesis(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).exitParenthesis(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof implVisitor ) return ((implVisitor<? extends T>)visitor).visitParenthesis(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 	public static class AddOrSubContext extends ExprContext {
 		public ExprContext e1;
@@ -544,55 +427,16 @@ public class implParser extends Parser {
 		}
 		public TerminalNode ADDSUB() { return getToken(implParser.ADDSUB, 0); }
 		public AddOrSubContext(ExprContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).enterAddOrSub(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).exitAddOrSub(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof implVisitor ) return ((implVisitor<? extends T>)visitor).visitAddOrSub(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 	public static class VariableContext extends ExprContext {
 		public Token x;
 		public TerminalNode ID() { return getToken(implParser.ID, 0); }
 		public VariableContext(ExprContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).enterVariable(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).exitVariable(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof implVisitor ) return ((implVisitor<? extends T>)visitor).visitVariable(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 	public static class ConstantContext extends ExprContext {
 		public Token c;
 		public TerminalNode FLOAT() { return getToken(implParser.FLOAT, 0); }
 		public ConstantContext(ExprContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).enterConstant(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).exitConstant(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof implVisitor ) return ((implVisitor<? extends T>)visitor).visitConstant(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 	public static class FortegnContext extends ExprContext {
 		public Token op;
@@ -602,19 +446,6 @@ public class implParser extends Parser {
 			return getRuleContext(ExprContext.class,0);
 		}
 		public FortegnContext(ExprContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).enterFortegn(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).exitFortegn(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof implVisitor ) return ((implVisitor<? extends T>)visitor).visitFortegn(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 	public static class MultOrDivContext extends ExprContext {
 		public ExprContext e1;
@@ -628,19 +459,6 @@ public class implParser extends Parser {
 		}
 		public TerminalNode MULTIDIV() { return getToken(implParser.MULTIDIV, 0); }
 		public MultOrDivContext(ExprContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).enterMultOrDiv(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).exitMultOrDiv(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof implVisitor ) return ((implVisitor<? extends T>)visitor).visitMultOrDiv(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ExprContext expr() throws RecognitionException {
@@ -786,19 +604,6 @@ public class implParser extends Parser {
 			return getRuleContext(ExprContext.class,i);
 		}
 		public UnequalContext(ConditionContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).enterUnequal(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).exitUnequal(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof implVisitor ) return ((implVisitor<? extends T>)visitor).visitUnequal(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 	public static class LessThanContext extends ConditionContext {
 		public ExprContext e1;
@@ -810,19 +615,6 @@ public class implParser extends Parser {
 			return getRuleContext(ExprContext.class,i);
 		}
 		public LessThanContext(ConditionContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).enterLessThan(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).exitLessThan(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof implVisitor ) return ((implVisitor<? extends T>)visitor).visitLessThan(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 	public static class OrContext extends ConditionContext {
 		public ConditionContext c1;
@@ -842,19 +634,6 @@ public class implParser extends Parser {
 			return getRuleContext(ConditionContext.class,i);
 		}
 		public OrContext(ConditionContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).enterOr(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).exitOr(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof implVisitor ) return ((implVisitor<? extends T>)visitor).visitOr(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 	public static class EqualContext extends ConditionContext {
 		public ExprContext e1;
@@ -866,19 +645,6 @@ public class implParser extends Parser {
 			return getRuleContext(ExprContext.class,i);
 		}
 		public EqualContext(ConditionContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).enterEqual(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).exitEqual(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof implVisitor ) return ((implVisitor<? extends T>)visitor).visitEqual(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 	public static class AndContext extends ConditionContext {
 		public ConditionContext c1;
@@ -898,19 +664,6 @@ public class implParser extends Parser {
 			return getRuleContext(ConditionContext.class,i);
 		}
 		public AndContext(ConditionContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).enterAnd(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).exitAnd(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof implVisitor ) return ((implVisitor<? extends T>)visitor).visitAnd(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 	public static class MoreThanContext extends ConditionContext {
 		public ExprContext e1;
@@ -922,19 +675,6 @@ public class implParser extends Parser {
 			return getRuleContext(ExprContext.class,i);
 		}
 		public MoreThanContext(ConditionContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).enterMoreThan(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof implListener ) ((implListener)listener).exitMoreThan(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof implVisitor ) return ((implVisitor<? extends T>)visitor).visitMoreThan(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ConditionContext condition() throws RecognitionException {

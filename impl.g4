@@ -9,6 +9,7 @@ program : c=command                      # SingleCommand
 	;
 	
 command : x=ID '=' e=expr ';'	         # Assignment
+	| x=ID op=INCDEC ';' 	# IncreOrDecre
 	| 'output' e=expr ';'            # Output
     | 'while' '('c=condition')' p=program  # WhileLoop
 	| 'for' '(' x=ID '=' e1=expr '..' e2=expr ')' p=program # ForLoop
@@ -34,10 +35,12 @@ condition : e1=expr '!=' e2=expr # Unequal
 
 /* --------------------------------Lexer Rules-----------------------------------------*/
 ID    : ALPHA (ALPHA|NUM)* ;
-FLOAT : '-'? NUM+ ('.' NUM+)? ;
+FLOAT : NUM+ ('.' NUM+)? ;
 
-MULTIDIV : ('*' | '/');
-ADDSUB : ('+' | '-');
+MULTIDIV : ('*'|'/') ;
+ADDSUB : ('+'|'-') ;
+INCDEC : ('++'|'--') ;
+
 ALPHA : [a-zA-Z_ÆØÅæøå] ;
 NUM   : [0-9] ;
 

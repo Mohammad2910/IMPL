@@ -10,7 +10,8 @@ program : c=command                      # SingleCommand
 	
 command : x=ID '=' e=expr ';'	         # Assignment
 	| 'output' e=expr ';'            # Output
-        | 'while' '('c=condition')' p=program  # WhileLoop
+    | 'while' '('c=condition')' p=program  # WhileLoop
+	| 'for' '(' x=ID '=' e1=expr '..' e2=expr ')' p=program # ForLoop
 	;
 	
 expr	: e1=expr '+' e2=expr # Addition

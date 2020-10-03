@@ -79,7 +79,18 @@ class Interpreter extends AbstractParseTreeVisitor<Double> implements implVisito
 	    visit(ctx.p);
 	}
 	return null;
-    }
+	}
+	
+	public Double visitForLoop(implParser.ForLoopContext ctx) {
+		Double a=visit(ctx.e1);
+		Double n=visit(ctx.e2);
+		Double i;
+
+		for(i=a..n) {
+			visit(ctx.p);
+		}
+		return null;
+	}
     
     public Double visitParenthesis(implParser.ParenthesisContext ctx){
 	return visit(ctx.e);

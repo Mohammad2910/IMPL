@@ -15,7 +15,7 @@ implParser.java:	impl.g4
 	$(antlr4) -visitor impl.g4
 
 test:	main.class
-	java main impl_additional.txt
+	java main impl_input.txt
 
 tree:	$(GENERATED) impl.g4
 	javac $(GENERATED)

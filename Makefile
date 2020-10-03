@@ -22,4 +22,4 @@ tree:	$(GENERATED) impl.g4
 	$(grun) impl start -tree -gui < impl_additional.txt
 
 clean:
-	rm $(GENERATED)
+	rm $(GENERATED) *.class *.interp *.tokens implBaseListener.java implListener.java

@@ -111,25 +111,13 @@ public class implBaseListener implements implListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterAddition(implParser.AdditionContext ctx) { }
+	@Override public void enterAddOrSub(implParser.AddOrSubContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitAddition(implParser.AdditionContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterMultiplication(implParser.MultiplicationContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitMultiplication(implParser.MultiplicationContext ctx) { }
+	@Override public void exitAddOrSub(implParser.AddOrSubContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -147,18 +135,6 @@ public class implBaseListener implements implListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterSubtraction(implParser.SubtractionContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitSubtraction(implParser.SubtractionContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterConstant(implParser.ConstantContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -171,13 +147,25 @@ public class implBaseListener implements implListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDivision(implParser.DivisionContext ctx) { }
+	@Override public void enterFortegn(implParser.FortegnContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDivision(implParser.DivisionContext ctx) { }
+	@Override public void exitFortegn(implParser.FortegnContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterMultOrDiv(implParser.MultOrDivContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitMultOrDiv(implParser.MultOrDivContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

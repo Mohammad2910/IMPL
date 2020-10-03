@@ -84,9 +84,14 @@ class Interpreter extends AbstractParseTreeVisitor<Double> implements implVisito
 	public Double visitForLoop(implParser.ForLoopContext ctx) {
 		Double a=visit(ctx.e1);
 		Double n=visit(ctx.e2);
-		Double i;
+		int aint = a.intValue();
+		int nint = n.intValue();
 
-		for(i=a..n) {
+		String id=ctx.x.getText();
+		env.setVariable(id,a);
+
+		for(int i = aint ; i <= nint; i++) {
+			env.setVariable(id,i*1.0);
 			visit(ctx.p);
 		}
 		return null;
@@ -100,22 +105,31 @@ class Interpreter extends AbstractParseTreeVisitor<Double> implements implVisito
 	return env.getVariable(ctx.x.getText());
     };
     
-    public Double visitAddition(implParser.AdditionContext ctx){
-	return visit(ctx.e1)+visit(ctx.e2);
-	};
-	
-	public Double visitSubtraction(implParser.SubtractionContext ctx){
+    public Double visitAddOrSub(implParser.AddOrSubContext ctx){
+	if (ctx.op.getText.equals("+")) {
+		return visit(ctx.e1)+visit(ctx.e2);
+	} else {
 		return visit(ctx.e1)-visit(ctx.e2);
+	}
+
 	};
 
-    public Double visitMultiplication(implParser.MultiplicationContext ctx){
-	return visit(ctx.e1)*visit(ctx.e2);
+    public Double visitMultOrDiv(implParser.MultOrDivContext ctx){
+		if (ctx.op.getText.equals("*")) {
+			return visit(ctx.e1)*visit(ctx.e2);
+		} else {
+			return visit(ctx.e1)/visit(ctx.e2);
+		}
 	};
+
+	public Double visitFortegn(implParser.FortegnContext ctx) {
+		if (ctx.op.getText.equals("+")) {
+			return visit(ctx.e);
+		} else {
+			return -visit(ctx.e);
+		}
+	}
 	
-	public Double visitDivision(implParser.DivisionContext ctx){
-		return visit(ctx.e1)/visit(ctx.e2);
-	};
-
     public Double visitConstant(implParser.ConstantContext ctx){
 	return Double.parseDouble(ctx.c.getText()); 
     };

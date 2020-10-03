@@ -101,29 +101,17 @@ public interface implListener extends ParseTreeListener {
 	 */
 	void exitParenthesis(implParser.ParenthesisContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code Addition}
+	 * Enter a parse tree produced by the {@code AddOrSub}
 	 * labeled alternative in {@link implParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void enterAddition(implParser.AdditionContext ctx);
+	void enterAddOrSub(implParser.AddOrSubContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code Addition}
+	 * Exit a parse tree produced by the {@code AddOrSub}
 	 * labeled alternative in {@link implParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void exitAddition(implParser.AdditionContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code Multiplication}
-	 * labeled alternative in {@link implParser#expr}.
-	 * @param ctx the parse tree
-	 */
-	void enterMultiplication(implParser.MultiplicationContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code Multiplication}
-	 * labeled alternative in {@link implParser#expr}.
-	 * @param ctx the parse tree
-	 */
-	void exitMultiplication(implParser.MultiplicationContext ctx);
+	void exitAddOrSub(implParser.AddOrSubContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code Variable}
 	 * labeled alternative in {@link implParser#expr}.
@@ -137,18 +125,6 @@ public interface implListener extends ParseTreeListener {
 	 */
 	void exitVariable(implParser.VariableContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code Subtraction}
-	 * labeled alternative in {@link implParser#expr}.
-	 * @param ctx the parse tree
-	 */
-	void enterSubtraction(implParser.SubtractionContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code Subtraction}
-	 * labeled alternative in {@link implParser#expr}.
-	 * @param ctx the parse tree
-	 */
-	void exitSubtraction(implParser.SubtractionContext ctx);
-	/**
 	 * Enter a parse tree produced by the {@code Constant}
 	 * labeled alternative in {@link implParser#expr}.
 	 * @param ctx the parse tree
@@ -161,17 +137,29 @@ public interface implListener extends ParseTreeListener {
 	 */
 	void exitConstant(implParser.ConstantContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code Division}
+	 * Enter a parse tree produced by the {@code Fortegn}
 	 * labeled alternative in {@link implParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void enterDivision(implParser.DivisionContext ctx);
+	void enterFortegn(implParser.FortegnContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code Division}
+	 * Exit a parse tree produced by the {@code Fortegn}
 	 * labeled alternative in {@link implParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void exitDivision(implParser.DivisionContext ctx);
+	void exitFortegn(implParser.FortegnContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code MultOrDiv}
+	 * labeled alternative in {@link implParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterMultOrDiv(implParser.MultOrDivContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code MultOrDiv}
+	 * labeled alternative in {@link implParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitMultOrDiv(implParser.MultOrDivContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code Unequal}
 	 * labeled alternative in {@link implParser#condition}.
